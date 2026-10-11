@@ -17,12 +17,13 @@ const coinGeckoIds = {
   ppica: "picasso",
   uflix: "omniflix-network",
   inj: "injective",
+  uluna: "terra-luna-2",
 };
 
 async function tvl() {
   const balances = {};
-  const { zones } = await get(endPoints.quicksilver + "/quicksilver/interchainstaking/v1/zones");
-  const { supply } = await get(endPoints.quicksilver + "/cosmos/bank/v1beta1/supply");
+  const { zones } = await get(endPoints.quicksilver + "/quicksilver/interchainstaking/v1/zones", { timeout: 30000 });
+  const { supply } = await get(endPoints.quicksilver + "/cosmos/bank/v1beta1/supply", { timeout: 30000 });
 
   zones.forEach((zone) => {
     const balance = supply.find((coin) => coin.denom === zone.local_denom);

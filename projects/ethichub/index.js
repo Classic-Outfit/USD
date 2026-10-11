@@ -16,7 +16,7 @@ const ORIGINATORS_MAINNET = [
 
 // Celo
 const ETHIX_TOKEN_CELO = ADDRESSES.celo.ETHIX;
-const CEUR_TOKEN_CELO = '0xd8763cba276a3738e6de85b4b3bf5fded6d6ca73';
+const CEUR_TOKEN_CELO = ADDRESSES.celo.cEUR;
 const STAKED_ETHIX_CELO = '0xCb16E29d0B667BaD7266E5d0Cd59b711b6273C6B';
 const LP_ETHIX_CUSD_UNIV3 = '0x3420720E561F3082f1e514a4545f0F2e0c955a5d';
 const CREDIT_LINE_CELO = '0xDb5D3aBF19014308A67420344021CEEE6003ACdd';
@@ -42,7 +42,7 @@ const creditLinesAbi = 'function creditLines(uint256 creditLineID) external view
 // Gnosis 
 const LP_ETHIX_WXDAI_SUSHI = '0xe5bc36119ffe40541eb61949e13607bce23577eb';
 const LP_ETHIX_WETH_UNIV2_GNOSIS = '0x2b8d7a0ed5e642f6441862d353c60c8f8ff2acd1';
-const ETHIX_TOKEN_GNOSIS = '0xec3f3e6d7907acDa3A7431abD230196CDA3FbB19';
+const ETHIX_TOKEN_GNOSIS = ADDRESSES.xdai.ETHIX;
 
 async function borrowedEth(api) {
   const borrowedAmount = await api.call({ target: MINIMICE_BOND_MAINNET, abi: 'uint256:totalBorrowed' });
