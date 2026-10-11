@@ -16,13 +16,13 @@ importers:
         version: 1.17.7
       '@injectivelabs/sdk-ts':
         specifier: ^1.14.5
-        version: 1.17.7(bufferutil@4.1.0)(google-protobuf@3.21.4)(typescript@5.9.3)(utf-8-validate@5.0.10)
+        version: 1.17.7(bufferutil@4.1.0)(debug@4.4.3(supports-color@7.2.0))(google-protobuf@3.21.4)(typescript@5.9.3)(utf-8-validate@5.0.10)
       '@kamino-finance/kliquidity-sdk':
         specifier: ^6.2.2
-        version: 6.5.1(bufferutil@4.1.0)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3)(utf-8-validate@5.0.10)
+        version: 6.5.1(bufferutil@4.1.0)(debug@4.4.3(supports-color@7.2.0))(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3)(utf-8-validate@5.0.10)
       '@polkadot/api':
         specifier: ^16.1.1
-        version: 16.5.4(bufferutil@4.1.0)(utf-8-validate@5.0.10)
+        version: 16.5.4(bufferutil@4.1.0)(supports-color@7.2.0)(utf-8-validate@5.0.10)
       '@polkadot/util':
         specifier: 14.0.1
         version: 14.0.1
@@ -34,7 +34,7 @@ importers:
         version: 3.2.0
       fuels:
         specifier: ^0.103.0
-        version: 0.103.0(vitest@3.0.9(@types/node@25.2.3))
+        version: 0.103.0(supports-color@7.2.0)(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
       request:
         specifier: ^2.88.2
         version: 2.88.2
@@ -561,6 +561,7 @@ packages:
     engines: {node: ^22.20 || ^24.12 || >=25}
     cpu: [x64]
     os: [linux]
+    libc: [glibc]
 
   '@noble/ciphers@1.3.0':
     resolution: {integrity: sha512-2I0gnIVPtfnMw9ee9h1dJG7tp81+8Ob3OJb3Mv37rx5L40/b0i7djjCVvGOVqc9AEIQyvyu1i6ypKdFw8R8gQw==}
@@ -845,66 +846,79 @@ packages:
     resolution: {integrity: sha512-81wiiX3v7aqy+T+bT61TJ78yJjRquqFFTTbAPt08imfQQzkPIW8t6aJbkTagtCCrXMNc9D66+geqlK7ydLPNqA==}
     cpu: [arm]
     os: [linux]
+    libc: [glibc]
 
   '@rollup/rollup-linux-arm-musleabihf@4.62.4':
     resolution: {integrity: sha512-9kmDIvNZqdoHOBZgNtpTBeLWYO/LVipM3H/j62P8848/l/VPEQL6N3uxU9pvP1oZAsXyC2MEnFP3ovRjo7WYNQ==}
     cpu: [arm]
     os: [linux]
+    libc: [musl]
 
   '@rollup/rollup-linux-arm64-gnu@4.62.4':
     resolution: {integrity: sha512-CcnXHWnXg69g+DX5VWL3FHts3qMRN2uVEHX+BZvGLdd07/gXkn3ePjYtO1LDJvxkGKVHMclKBRa1QUTH+6toYQ==}
     cpu: [arm64]
     os: [linux]
+    libc: [glibc]
 
   '@rollup/rollup-linux-arm64-musl@4.62.4':
     resolution: {integrity: sha512-iFOibiHnTRuhrWLlRsOQFdZJJIa7S8OwkneJr4ocALP16u5yk6lWLINFwhHaEqBFMsKDUZofLkGos7+CPzGB3g==}
     cpu: [arm64]
     os: [linux]
+    libc: [musl]
 
   '@rollup/rollup-linux-loong64-gnu@4.62.4':
     resolution: {integrity: sha512-XnWYMI7euHlb5a871xPja+Gm7DRCFU+FGRrtS2sMq9N8FvqtpagUy6gD4YOemC5MRk9xbh8+jYMEJbigFQwsgA==}
     cpu: [loong64]
     os: [linux]
+    libc: [glibc]
 
   '@rollup/rollup-linux-loong64-musl@4.62.4':
     resolution: {integrity: sha512-qGDAlO0U8xedCcsdRm9oaoQY8DAx/QT7uIxJWhCdx0ceIWX783UC9QSYkdpzAe29wNiVfp24+bZdQmn49o45SQ==}
     cpu: [loong64]
     os: [linux]
+    libc: [musl]
 
   '@rollup/rollup-linux-ppc64-gnu@4.62.4':
     resolution: {integrity: sha512-ru4H6ezD7ysA5EiEK6qkkaEb4modH8CTej6kUy/gQi20u3kB3G7Zn8snXXkeJSCOFKG/rbPPtM/+9Wgas1961w==}
     cpu: [ppc64]
     os: [linux]
+    libc: [glibc]
 
   '@rollup/rollup-linux-ppc64-musl@4.62.4':
     resolution: {integrity: sha512-2W4MO5WQVJnbJaZdvDb9rhBDuFU1nKIepPFpJUBsTh2k1YY2g+ODViaWuyOAjQ5cOP7NvrvLzt3wvHOoiAvc7w==}
     cpu: [ppc64]
     os: [linux]
+    libc: [musl]
 
   '@rollup/rollup-linux-riscv64-gnu@4.62.4':
     resolution: {integrity: sha512-+fxjfuoAmVMCYV5QyjoIpu0cp5DOiOTeqYFk1AVaxGr+/ravWLX89XfQmptsoWcaVy/TGf2hexzbUOrCQIL1CQ==}
     cpu: [riscv64]
     os: [linux]
+    libc: [glibc]
 
   '@rollup/rollup-linux-riscv64-musl@4.62.4':
     resolution: {integrity: sha512-jTn8JfHGL4djjFxPuM06LmNUJDsst2jeVlsd9OmIH6zc5sC9K6rIuO4YajXatLUpBmBKl6b35ro1QZocLi+tcA==}
     cpu: [riscv64]
     os: [linux]
+    libc: [musl]
 
   '@rollup/rollup-linux-s390x-gnu@4.62.4':
     resolution: {integrity: sha512-oCJCJL4pXsoDcP2QZ+JVlPTIRc6266zsIaeJJsWImmF7HO0W8nb6HuSgZlMWxJwaPf8ehbSw8yo0EUw925hKsA==}
     cpu: [s390x]
     os: [linux]
+    libc: [glibc]
 
   '@rollup/rollup-linux-x64-gnu@4.62.4':
     resolution: {integrity: sha512-W69hukhZ3KKNRCaMIEzKvcFye42hh0FE1+YoYaf5+Ikacuftoco6yO/xouz0hc5d5W/s3yBro5jRiuEE/Q5vUw==}
     cpu: [x64]
     os: [linux]
+    libc: [glibc]
 
   '@rollup/rollup-linux-x64-musl@4.62.4':
     resolution: {integrity: sha512-qiXbGG2jkjXhzXpsFZSR2Xpb8DN/UaxYsbb/STbuR/6fpaDgRmmaq1B/LmtF2wQFOFOSsK2jdE0RZ3a0zHn4QA==}
     cpu: [x64]
     os: [linux]
+    libc: [musl]
 
   '@rollup/rollup-openbsd-x64@4.62.4':
     resolution: {integrity: sha512-nWeM//hxv8mIo6jD7Hu4o48DVmV9pbV6gsKaWU+4NFyqHoPKwrkRiZGLKUhOBk8qNmDmpwFtPKg80Bo/Tn4xiQ==}
@@ -2011,8 +2025,8 @@ packages:
     resolution: {integrity: sha512-r3kRtnoPu3FxGJ3fny6PKNnU3pteb29o6qAa0ugzhSseKNWRkw1dw8nIjXMyyKaU9vQxxVIE62Mb3bKbdrgpiw==}
     engines: {node: '>=12'}
 
-  source-map-js@1.2.1:
-    resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
+  source-map-js@1.2.2:
+    resolution: {integrity: sha512-KGj/8Y43x35aZVDtt+J4mK1hoLGHULMYfSkODJNQjNDC3oW1PqPoxMwo0pLUsWM/UEGzON/NxeHywEfNXNP3Vw==}
     engines: {node: '>=0.10.0'}
 
   source-map@0.6.1:
@@ -2442,14 +2456,14 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  '@cosmjs/stargate@0.33.0(bufferutil@4.1.0)(utf-8-validate@5.0.10)':
+  '@cosmjs/stargate@0.33.0(bufferutil@4.1.0)(debug@4.4.3(supports-color@7.2.0))(utf-8-validate@5.0.10)':
     dependencies:
       '@cosmjs/amino': 0.33.0
       '@cosmjs/encoding': 0.33.1
       '@cosmjs/math': 0.33.1
       '@cosmjs/proto-signing': 0.33.0
       '@cosmjs/stream': 0.33.1
-      '@cosmjs/tendermint-rpc': 0.33.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)
+      '@cosmjs/tendermint-rpc': 0.33.1(bufferutil@4.1.0)(debug@4.4.3(supports-color@7.2.0))(utf-8-validate@5.0.10)
       '@cosmjs/utils': 0.33.1
       cosmjs-types: 0.9.0
     transitivePeerDependencies:
@@ -2461,7 +2475,7 @@ snapshots:
     dependencies:
       xstream: 11.14.0
 
-  '@cosmjs/tendermint-rpc@0.33.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)':
+  '@cosmjs/tendermint-rpc@0.33.1(bufferutil@4.1.0)(debug@4.4.3(supports-color@7.2.0))(utf-8-validate@5.0.10)':
     dependencies:
       '@cosmjs/crypto': 0.33.1
       '@cosmjs/encoding': 0.33.1
@@ -2470,7 +2484,7 @@ snapshots:
       '@cosmjs/socket': 0.33.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)
       '@cosmjs/stream': 0.33.1
       '@cosmjs/utils': 0.33.1
-      axios: 1.13.5
+      axios: 1.13.5(debug@4.4.3(supports-color@7.2.0))
       readonly-date: 1.0.0
       xstream: 11.14.0
     transitivePeerDependencies:
@@ -2633,21 +2647,21 @@ snapshots:
   '@esbuild/win32-x64@0.25.3':
     optional: true
 
-  '@fuel-ts/abi-coder@0.103.0(vitest@3.0.9(@types/node@25.2.3))':
+  '@fuel-ts/abi-coder@0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))':
     dependencies:
-      '@fuel-ts/crypto': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
+      '@fuel-ts/crypto': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
       '@fuel-ts/errors': 0.103.0
-      '@fuel-ts/hasher': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
+      '@fuel-ts/hasher': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
       '@fuel-ts/math': 0.103.0
-      '@fuel-ts/utils': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
+      '@fuel-ts/utils': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
       type-fest: 4.34.1
     transitivePeerDependencies:
       - vitest
 
-  '@fuel-ts/abi-typegen@0.103.0(vitest@3.0.9(@types/node@25.2.3))':
+  '@fuel-ts/abi-typegen@0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))':
     dependencies:
       '@fuel-ts/errors': 0.103.0
-      '@fuel-ts/utils': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
+      '@fuel-ts/utils': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
       '@fuel-ts/versions': 0.103.0
       commander: 13.1.0
       glob: 10.4.5
@@ -2658,17 +2672,17 @@ snapshots:
     transitivePeerDependencies:
       - vitest
 
-  '@fuel-ts/account@0.103.0(vitest@3.0.9(@types/node@25.2.3))':
+  '@fuel-ts/account@0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))':
     dependencies:
-      '@fuel-ts/abi-coder': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
-      '@fuel-ts/address': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
-      '@fuel-ts/crypto': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
+      '@fuel-ts/abi-coder': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
+      '@fuel-ts/address': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
+      '@fuel-ts/crypto': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
       '@fuel-ts/errors': 0.103.0
-      '@fuel-ts/hasher': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
+      '@fuel-ts/hasher': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
       '@fuel-ts/math': 0.103.0
-      '@fuel-ts/merkle': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
-      '@fuel-ts/transactions': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
-      '@fuel-ts/utils': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
+      '@fuel-ts/merkle': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
+      '@fuel-ts/transactions': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
+      '@fuel-ts/utils': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
       '@fuel-ts/versions': 0.103.0
       '@fuels/vm-asm': 0.62.0
       '@noble/curves': 1.8.1
@@ -2681,37 +2695,37 @@ snapshots:
       - encoding
       - vitest
 
-  '@fuel-ts/address@0.103.0(vitest@3.0.9(@types/node@25.2.3))':
+  '@fuel-ts/address@0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))':
     dependencies:
-      '@fuel-ts/crypto': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
+      '@fuel-ts/crypto': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
       '@fuel-ts/errors': 0.103.0
-      '@fuel-ts/utils': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
+      '@fuel-ts/utils': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
       '@noble/hashes': 1.7.1
     transitivePeerDependencies:
       - vitest
 
-  '@fuel-ts/contract@0.103.0(vitest@3.0.9(@types/node@25.2.3))':
+  '@fuel-ts/contract@0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))':
     dependencies:
-      '@fuel-ts/abi-coder': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
-      '@fuel-ts/account': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
-      '@fuel-ts/crypto': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
+      '@fuel-ts/abi-coder': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
+      '@fuel-ts/account': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
+      '@fuel-ts/crypto': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
       '@fuel-ts/errors': 0.103.0
-      '@fuel-ts/hasher': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
+      '@fuel-ts/hasher': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
       '@fuel-ts/math': 0.103.0
-      '@fuel-ts/merkle': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
-      '@fuel-ts/program': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
-      '@fuel-ts/transactions': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
-      '@fuel-ts/utils': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
+      '@fuel-ts/merkle': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
+      '@fuel-ts/program': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
+      '@fuel-ts/transactions': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
+      '@fuel-ts/utils': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
       '@fuels/vm-asm': 0.62.0
       ramda: 0.30.1
     transitivePeerDependencies:
       - encoding
       - vitest
 
-  '@fuel-ts/crypto@0.103.0(vitest@3.0.9(@types/node@25.2.3))':
+  '@fuel-ts/crypto@0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))':
     dependencies:
       '@fuel-ts/errors': 0.103.0
-      '@fuel-ts/utils': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
+      '@fuel-ts/utils': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
       '@noble/hashes': 1.7.1
     transitivePeerDependencies:
       - vitest
@@ -2720,10 +2734,10 @@ snapshots:
     dependencies:
       '@fuel-ts/versions': 0.103.0
 
-  '@fuel-ts/hasher@0.103.0(vitest@3.0.9(@types/node@25.2.3))':
+  '@fuel-ts/hasher@0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))':
     dependencies:
-      '@fuel-ts/crypto': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
-      '@fuel-ts/utils': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
+      '@fuel-ts/crypto': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
+      '@fuel-ts/utils': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
       '@noble/hashes': 1.7.1
     transitivePeerDependencies:
       - vitest
@@ -2734,73 +2748,73 @@ snapshots:
       '@types/bn.js': 5.1.6
       bn.js: 5.2.1
 
-  '@fuel-ts/merkle@0.103.0(vitest@3.0.9(@types/node@25.2.3))':
+  '@fuel-ts/merkle@0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))':
     dependencies:
-      '@fuel-ts/hasher': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
+      '@fuel-ts/hasher': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
       '@fuel-ts/math': 0.103.0
     transitivePeerDependencies:
       - vitest
 
-  '@fuel-ts/program@0.103.0(vitest@3.0.9(@types/node@25.2.3))':
+  '@fuel-ts/program@0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))':
     dependencies:
-      '@fuel-ts/abi-coder': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
-      '@fuel-ts/account': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
-      '@fuel-ts/address': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
+      '@fuel-ts/abi-coder': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
+      '@fuel-ts/account': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
+      '@fuel-ts/address': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
       '@fuel-ts/errors': 0.103.0
       '@fuel-ts/math': 0.103.0
-      '@fuel-ts/transactions': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
-      '@fuel-ts/utils': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
+      '@fuel-ts/transactions': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
+      '@fuel-ts/utils': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
       '@fuels/vm-asm': 0.62.0
       ramda: 0.30.1
     transitivePeerDependencies:
       - encoding
       - vitest
 
-  '@fuel-ts/recipes@0.103.0(vitest@3.0.9(@types/node@25.2.3))':
+  '@fuel-ts/recipes@0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))':
     dependencies:
-      '@fuel-ts/abi-coder': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
-      '@fuel-ts/abi-typegen': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
-      '@fuel-ts/account': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
-      '@fuel-ts/address': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
-      '@fuel-ts/contract': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
-      '@fuel-ts/program': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
-      '@fuel-ts/transactions': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
-      '@fuel-ts/utils': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
+      '@fuel-ts/abi-coder': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
+      '@fuel-ts/abi-typegen': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
+      '@fuel-ts/account': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
+      '@fuel-ts/address': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
+      '@fuel-ts/contract': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
+      '@fuel-ts/program': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
+      '@fuel-ts/transactions': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
+      '@fuel-ts/utils': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
     transitivePeerDependencies:
       - encoding
       - vitest
 
-  '@fuel-ts/script@0.103.0(vitest@3.0.9(@types/node@25.2.3))':
+  '@fuel-ts/script@0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))':
     dependencies:
-      '@fuel-ts/abi-coder': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
-      '@fuel-ts/account': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
+      '@fuel-ts/abi-coder': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
+      '@fuel-ts/account': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
       '@fuel-ts/errors': 0.103.0
       '@fuel-ts/math': 0.103.0
-      '@fuel-ts/program': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
-      '@fuel-ts/transactions': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
-      '@fuel-ts/utils': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
+      '@fuel-ts/program': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
+      '@fuel-ts/transactions': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
+      '@fuel-ts/utils': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
     transitivePeerDependencies:
       - encoding
       - vitest
 
-  '@fuel-ts/transactions@0.103.0(vitest@3.0.9(@types/node@25.2.3))':
+  '@fuel-ts/transactions@0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))':
     dependencies:
-      '@fuel-ts/abi-coder': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
-      '@fuel-ts/address': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
+      '@fuel-ts/abi-coder': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
+      '@fuel-ts/address': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
       '@fuel-ts/errors': 0.103.0
-      '@fuel-ts/hasher': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
+      '@fuel-ts/hasher': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
       '@fuel-ts/math': 0.103.0
-      '@fuel-ts/utils': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
+      '@fuel-ts/utils': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
     transitivePeerDependencies:
       - vitest
 
-  '@fuel-ts/utils@0.103.0(vitest@3.0.9(@types/node@25.2.3))':
+  '@fuel-ts/utils@0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))':
     dependencies:
       '@fuel-ts/errors': 0.103.0
       '@fuel-ts/math': 0.103.0
       '@fuel-ts/versions': 0.103.0
       fflate: 0.8.2
-      vitest: 3.0.9(@types/node@25.2.3)
+      vitest: 3.0.9(@types/node@25.2.3)(supports-color@7.2.0)
 
   '@fuel-ts/versions@0.103.0':
     dependencies:
@@ -2868,11 +2882,11 @@ snapshots:
       '@protobuf-ts/runtime': 2.11.1
       '@protobuf-ts/runtime-rpc': 2.11.1
 
-  '@injectivelabs/sdk-ts@1.17.7(bufferutil@4.1.0)(google-protobuf@3.21.4)(typescript@5.9.3)(utf-8-validate@5.0.10)':
+  '@injectivelabs/sdk-ts@1.17.7(bufferutil@4.1.0)(debug@4.4.3(supports-color@7.2.0))(google-protobuf@3.21.4)(typescript@5.9.3)(utf-8-validate@5.0.10)':
     dependencies:
       '@cosmjs/amino': 0.33.0
       '@cosmjs/proto-signing': 0.33.0
-      '@cosmjs/stargate': 0.33.0(bufferutil@4.1.0)(utf-8-validate@5.0.10)
+      '@cosmjs/stargate': 0.33.0(bufferutil@4.1.0)(debug@4.4.3(supports-color@7.2.0))(utf-8-validate@5.0.10)
       '@injectivelabs/abacus-proto-ts-v2': 1.17.4
       '@injectivelabs/core-proto-ts-v2': 1.17.3
       '@injectivelabs/exceptions': 1.17.7
@@ -2884,7 +2898,7 @@ snapshots:
       '@injectivelabs/networks': 1.17.7
       '@injectivelabs/olp-proto-ts-v2': 1.17.6
       '@injectivelabs/ts-types': 1.17.7
-      '@injectivelabs/utils': 1.17.7
+      '@injectivelabs/utils': 1.17.7(debug@4.4.3(supports-color@7.2.0))
       '@noble/curves': 1.9.7
       '@noble/hashes': 1.8.0
       '@protobuf-ts/grpcweb-transport': 2.11.1
@@ -2892,7 +2906,7 @@ snapshots:
       '@protobuf-ts/runtime-rpc': 2.11.1
       '@scure/base': 1.2.6
       '@scure/bip39': 1.6.0
-      axios: 1.13.5
+      axios: 1.13.5(debug@4.4.3(supports-color@7.2.0))
       cosmjs-types: 0.9.0
       ethers: 6.16.0(bufferutil@4.1.0)(utf-8-validate@5.0.10)
       eventemitter3: 5.0.4
@@ -2911,12 +2925,12 @@ snapshots:
 
   '@injectivelabs/ts-types@1.17.7': {}
 
-  '@injectivelabs/utils@1.17.7':
+  '@injectivelabs/utils@1.17.7(debug@4.4.3(supports-color@7.2.0))':
     dependencies:
       '@injectivelabs/exceptions': 1.17.7
       '@injectivelabs/networks': 1.17.7
       '@injectivelabs/ts-types': 1.17.7
-      axios: 1.13.5
+      axios: 1.13.5(debug@4.4.3(supports-color@7.2.0))
       bignumber.js: 9.3.1
       http-status-codes: 2.3.0
       store2: 2.14.4
@@ -2936,7 +2950,7 @@ snapshots:
 
   '@jup-ag/api@6.0.48': {}
 
-  '@kamino-finance/kliquidity-sdk@6.5.1(bufferutil@4.1.0)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3)(utf-8-validate@5.0.10)':
+  '@kamino-finance/kliquidity-sdk@6.5.1(bufferutil@4.1.0)(debug@4.4.3(supports-color@7.2.0))(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3)(utf-8-validate@5.0.10)':
     dependencies:
       '@coral-xyz/anchor': 0.29.0(bufferutil@4.1.0)(utf-8-validate@5.0.10)
       '@coral-xyz/borsh': 0.30.1(@solana/web3.js@1.95.8(bufferutil@4.1.0)(utf-8-validate@5.0.10))
@@ -2944,11 +2958,11 @@ snapshots:
       '@jup-ag/api': 6.0.48
       '@kamino-finance/scope-sdk': 8.0.7(bufferutil@4.1.0)(utf-8-validate@5.0.10)
       '@orca-so/whirlpool-client-sdk': 0.0.8(bufferutil@4.1.0)(utf-8-validate@5.0.10)
-      '@orca-so/whirlpool-sdk': 0.4.2(bufferutil@4.1.0)(utf-8-validate@5.0.10)
-      '@raydium-io/raydium-sdk': 1.3.1-beta.5(@solana/web3.js@1.95.8(bufferutil@4.1.0)(utf-8-validate@5.0.10))(bufferutil@4.1.0)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3)(utf-8-validate@5.0.10)
+      '@orca-so/whirlpool-sdk': 0.4.2(bufferutil@4.1.0)(debug@4.4.3(supports-color@7.2.0))(utf-8-validate@5.0.10)
+      '@raydium-io/raydium-sdk': 1.3.1-beta.5(@solana/web3.js@1.95.8(bufferutil@4.1.0)(utf-8-validate@5.0.10))(bufferutil@4.1.0)(debug@4.4.3(supports-color@7.2.0))(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3)(utf-8-validate@5.0.10)
       '@solana/spl-token': 0.4.14(@solana/web3.js@1.95.8(bufferutil@4.1.0)(utf-8-validate@5.0.10))(bufferutil@4.1.0)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3)(utf-8-validate@5.0.10)
       '@solana/web3.js': 1.95.8(bufferutil@4.1.0)(utf-8-validate@5.0.10)
-      axios: 1.13.5
+      axios: 1.13.5(debug@4.4.3(supports-color@7.2.0))
       bn.js: 5.2.2
       bs58: 6.0.0
       decimal.js: 10.6.0
@@ -3050,14 +3064,14 @@ snapshots:
       - encoding
       - utf-8-validate
 
-  '@orca-so/whirlpool-sdk@0.4.2(bufferutil@4.1.0)(utf-8-validate@5.0.10)':
+  '@orca-so/whirlpool-sdk@0.4.2(bufferutil@4.1.0)(debug@4.4.3(supports-color@7.2.0))(utf-8-validate@5.0.10)':
     dependencies:
       '@orca-so/common-sdk': 0.0.4(bufferutil@4.1.0)(utf-8-validate@5.0.10)
       '@orca-so/whirlpool-client-sdk': 0.0.7(bufferutil@4.1.0)(utf-8-validate@5.0.10)
       '@project-serum/anchor': 0.20.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)
       '@solana/spl-token': 0.1.8(bufferutil@4.1.0)(utf-8-validate@5.0.10)
       '@solana/web3.js': 1.95.8(bufferutil@4.1.0)(utf-8-validate@5.0.10)
-      axios: 0.25.0
+      axios: 0.25.0(debug@4.4.3(supports-color@7.2.0))
       decimal.js: 10.6.0
       tiny-invariant: 1.3.3
     transitivePeerDependencies:
@@ -3107,10 +3121,10 @@ snapshots:
   '@polkadot-api/utils@0.1.0':
     optional: true
 
-  '@polkadot/api-augment@16.5.4(bufferutil@4.1.0)(utf-8-validate@5.0.10)':
+  '@polkadot/api-augment@16.5.4(bufferutil@4.1.0)(supports-color@7.2.0)(utf-8-validate@5.0.10)':
     dependencies:
-      '@polkadot/api-base': 16.5.4(bufferutil@4.1.0)(utf-8-validate@5.0.10)
-      '@polkadot/rpc-augment': 16.5.4(bufferutil@4.1.0)(utf-8-validate@5.0.10)
+      '@polkadot/api-base': 16.5.4(bufferutil@4.1.0)(supports-color@7.2.0)(utf-8-validate@5.0.10)
+      '@polkadot/rpc-augment': 16.5.4(bufferutil@4.1.0)(supports-color@7.2.0)(utf-8-validate@5.0.10)
       '@polkadot/types': 16.5.4
       '@polkadot/types-augment': 16.5.4
       '@polkadot/types-codec': 16.5.4
@@ -3121,9 +3135,9 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@polkadot/api-base@16.5.4(bufferutil@4.1.0)(utf-8-validate@5.0.10)':
+  '@polkadot/api-base@16.5.4(bufferutil@4.1.0)(supports-color@7.2.0)(utf-8-validate@5.0.10)':
     dependencies:
-      '@polkadot/rpc-core': 16.5.4(bufferutil@4.1.0)(utf-8-validate@5.0.10)
+      '@polkadot/rpc-core': 16.5.4(bufferutil@4.1.0)(supports-color@7.2.0)(utf-8-validate@5.0.10)
       '@polkadot/types': 16.5.4
       '@polkadot/util': 14.0.1
       rxjs: 7.8.2
@@ -3133,12 +3147,12 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@polkadot/api-derive@16.5.4(bufferutil@4.1.0)(utf-8-validate@5.0.10)':
+  '@polkadot/api-derive@16.5.4(bufferutil@4.1.0)(supports-color@7.2.0)(utf-8-validate@5.0.10)':
     dependencies:
-      '@polkadot/api': 16.5.4(bufferutil@4.1.0)(utf-8-validate@5.0.10)
-      '@polkadot/api-augment': 16.5.4(bufferutil@4.1.0)(utf-8-validate@5.0.10)
-      '@polkadot/api-base': 16.5.4(bufferutil@4.1.0)(utf-8-validate@5.0.10)
-      '@polkadot/rpc-core': 16.5.4(bufferutil@4.1.0)(utf-8-validate@5.0.10)
+      '@polkadot/api': 16.5.4(bufferutil@4.1.0)(supports-color@7.2.0)(utf-8-validate@5.0.10)
+      '@polkadot/api-augment': 16.5.4(bufferutil@4.1.0)(supports-color@7.2.0)(utf-8-validate@5.0.10)
+      '@polkadot/api-base': 16.5.4(bufferutil@4.1.0)(supports-color@7.2.0)(utf-8-validate@5.0.10)
+      '@polkadot/rpc-core': 16.5.4(bufferutil@4.1.0)(supports-color@7.2.0)(utf-8-validate@5.0.10)
       '@polkadot/types': 16.5.4
       '@polkadot/types-codec': 16.5.4
       '@polkadot/util': 14.0.1
@@ -3150,15 +3164,15 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@polkadot/api@16.5.4(bufferutil@4.1.0)(utf-8-validate@5.0.10)':
+  '@polkadot/api@16.5.4(bufferutil@4.1.0)(supports-color@7.2.0)(utf-8-validate@5.0.10)':
     dependencies:
-      '@polkadot/api-augment': 16.5.4(bufferutil@4.1.0)(utf-8-validate@5.0.10)
-      '@polkadot/api-base': 16.5.4(bufferutil@4.1.0)(utf-8-validate@5.0.10)
-      '@polkadot/api-derive': 16.5.4(bufferutil@4.1.0)(utf-8-validate@5.0.10)
+      '@polkadot/api-augment': 16.5.4(bufferutil@4.1.0)(supports-color@7.2.0)(utf-8-validate@5.0.10)
+      '@polkadot/api-base': 16.5.4(bufferutil@4.1.0)(supports-color@7.2.0)(utf-8-validate@5.0.10)
+      '@polkadot/api-derive': 16.5.4(bufferutil@4.1.0)(supports-color@7.2.0)(utf-8-validate@5.0.10)
       '@polkadot/keyring': 14.0.1(@polkadot/util-crypto@14.0.1(@polkadot/util@14.0.1))(@polkadot/util@14.0.1)
-      '@polkadot/rpc-augment': 16.5.4(bufferutil@4.1.0)(utf-8-validate@5.0.10)
-      '@polkadot/rpc-core': 16.5.4(bufferutil@4.1.0)(utf-8-validate@5.0.10)
-      '@polkadot/rpc-provider': 16.5.4(bufferutil@4.1.0)(utf-8-validate@5.0.10)
+      '@polkadot/rpc-augment': 16.5.4(bufferutil@4.1.0)(supports-color@7.2.0)(utf-8-validate@5.0.10)
+      '@polkadot/rpc-core': 16.5.4(bufferutil@4.1.0)(supports-color@7.2.0)(utf-8-validate@5.0.10)
+      '@polkadot/rpc-provider': 16.5.4(bufferutil@4.1.0)(supports-color@7.2.0)(utf-8-validate@5.0.10)
       '@polkadot/types': 16.5.4
       '@polkadot/types-augment': 16.5.4
       '@polkadot/types-codec': 16.5.4
@@ -3186,9 +3200,9 @@ snapshots:
       '@substrate/ss58-registry': 1.51.0
       tslib: 2.8.1
 
-  '@polkadot/rpc-augment@16.5.4(bufferutil@4.1.0)(utf-8-validate@5.0.10)':
+  '@polkadot/rpc-augment@16.5.4(bufferutil@4.1.0)(supports-color@7.2.0)(utf-8-validate@5.0.10)':
     dependencies:
-      '@polkadot/rpc-core': 16.5.4(bufferutil@4.1.0)(utf-8-validate@5.0.10)
+      '@polkadot/rpc-core': 16.5.4(bufferutil@4.1.0)(supports-color@7.2.0)(utf-8-validate@5.0.10)
       '@polkadot/types': 16.5.4
       '@polkadot/types-codec': 16.5.4
       '@polkadot/util': 14.0.1
@@ -3198,10 +3212,10 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@polkadot/rpc-core@16.5.4(bufferutil@4.1.0)(utf-8-validate@5.0.10)':
+  '@polkadot/rpc-core@16.5.4(bufferutil@4.1.0)(supports-color@7.2.0)(utf-8-validate@5.0.10)':
     dependencies:
-      '@polkadot/rpc-augment': 16.5.4(bufferutil@4.1.0)(utf-8-validate@5.0.10)
-      '@polkadot/rpc-provider': 16.5.4(bufferutil@4.1.0)(utf-8-validate@5.0.10)
+      '@polkadot/rpc-augment': 16.5.4(bufferutil@4.1.0)(supports-color@7.2.0)(utf-8-validate@5.0.10)
+      '@polkadot/rpc-provider': 16.5.4(bufferutil@4.1.0)(supports-color@7.2.0)(utf-8-validate@5.0.10)
       '@polkadot/types': 16.5.4
       '@polkadot/util': 14.0.1
       rxjs: 7.8.2
@@ -3211,7 +3225,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@polkadot/rpc-provider@16.5.4(bufferutil@4.1.0)(utf-8-validate@5.0.10)':
+  '@polkadot/rpc-provider@16.5.4(bufferutil@4.1.0)(supports-color@7.2.0)(utf-8-validate@5.0.10)':
     dependencies:
       '@polkadot/keyring': 14.0.1(@polkadot/util-crypto@14.0.1(@polkadot/util@14.0.1))(@polkadot/util@14.0.1)
       '@polkadot/types': 16.5.4
@@ -3223,7 +3237,7 @@ snapshots:
       '@polkadot/x-ws': 14.0.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)
       eventemitter3: 5.0.4
       mock-socket: 9.3.1
-      nock: 13.5.6
+      nock: 13.5.6(supports-color@7.2.0)
       tslib: 2.8.1
     optionalDependencies:
       '@substrate/connect': 0.8.11(bufferutil@4.1.0)(utf-8-validate@5.0.10)
@@ -3432,12 +3446,12 @@ snapshots:
 
   '@protobuf-ts/runtime@2.11.1': {}
 
-  '@raydium-io/raydium-sdk@1.3.1-beta.5(@solana/web3.js@1.95.8(bufferutil@4.1.0)(utf-8-validate@5.0.10))(bufferutil@4.1.0)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3)(utf-8-validate@5.0.10)':
+  '@raydium-io/raydium-sdk@1.3.1-beta.5(@solana/web3.js@1.95.8(bufferutil@4.1.0)(utf-8-validate@5.0.10))(bufferutil@4.1.0)(debug@4.4.3(supports-color@7.2.0))(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3)(utf-8-validate@5.0.10)':
     dependencies:
       '@solana/buffer-layout': 4.0.1
       '@solana/spl-token': 0.3.11(@solana/web3.js@1.95.8(bufferutil@4.1.0)(utf-8-validate@5.0.10))(bufferutil@4.1.0)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3)(utf-8-validate@5.0.10)
       '@solana/web3.js': 1.95.8(bufferutil@4.1.0)(utf-8-validate@5.0.10)
-      axios: 1.13.5
+      axios: 1.13.5(debug@4.4.3(supports-color@7.2.0))
       big.js: 6.2.2
       bn.js: 5.2.2
       decimal.js: 10.6.0
@@ -3860,15 +3874,15 @@ snapshots:
 
   aws4@1.13.2: {}
 
-  axios@0.25.0:
+  axios@0.25.0(debug@4.4.3(supports-color@7.2.0)):
     dependencies:
-      follow-redirects: 1.15.11
+      follow-redirects: 1.15.11(debug@4.4.3(supports-color@7.2.0))
     transitivePeerDependencies:
       - debug
 
-  axios@1.13.5:
+  axios@1.13.5(debug@4.4.3(supports-color@7.2.0)):
     dependencies:
-      follow-redirects: 1.15.11
+      follow-redirects: 1.15.11(debug@4.4.3(supports-color@7.2.0))
       form-data: 4.0.5
       proxy-from-env: 1.1.0
     transitivePeerDependencies:
@@ -4041,13 +4055,17 @@ snapshots:
 
   data-uri-to-buffer@4.0.1: {}
 
-  debug@3.2.7:
+  debug@3.2.7(supports-color@7.2.0):
     dependencies:
       ms: 2.1.3
+    optionalDependencies:
+      supports-color: 7.2.0
 
-  debug@4.4.3:
+  debug@4.4.3(supports-color@7.2.0):
     dependencies:
       ms: 2.1.3
+    optionalDependencies:
+      supports-color: 7.2.0
 
   decimal.js-light@2.5.1: {}
 
@@ -4249,7 +4267,9 @@ snapshots:
     dependencies:
       traverse-chain: 0.1.0
 
-  follow-redirects@1.15.11: {}
+  follow-redirects@1.15.11(debug@4.4.3(supports-color@7.2.0)):
+    optionalDependencies:
+      debug: 4.4.3(supports-color@7.2.0)
 
   foreground-child@3.3.1:
     dependencies:
@@ -4279,22 +4299,22 @@ snapshots:
   fsevents@2.3.3:
     optional: true
 
-  fuels@0.103.0(vitest@3.0.9(@types/node@25.2.3)):
+  fuels@0.103.0(supports-color@7.2.0)(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0)):
     dependencies:
-      '@fuel-ts/abi-coder': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
-      '@fuel-ts/abi-typegen': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
-      '@fuel-ts/account': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
-      '@fuel-ts/address': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
-      '@fuel-ts/contract': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
-      '@fuel-ts/crypto': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
+      '@fuel-ts/abi-coder': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
+      '@fuel-ts/abi-typegen': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
+      '@fuel-ts/account': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
+      '@fuel-ts/address': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
+      '@fuel-ts/contract': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
+      '@fuel-ts/crypto': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
       '@fuel-ts/errors': 0.103.0
-      '@fuel-ts/hasher': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
+      '@fuel-ts/hasher': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
       '@fuel-ts/math': 0.103.0
-      '@fuel-ts/program': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
-      '@fuel-ts/recipes': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
-      '@fuel-ts/script': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
-      '@fuel-ts/transactions': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
-      '@fuel-ts/utils': 0.103.0(vitest@3.0.9(@types/node@25.2.3))
+      '@fuel-ts/program': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
+      '@fuel-ts/recipes': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
+      '@fuel-ts/script': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
+      '@fuel-ts/transactions': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
+      '@fuel-ts/utils': 0.103.0(vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0))
       '@fuel-ts/versions': 0.103.0
       '@fuels/vm-asm': 0.62.0
       bundle-require: 5.1.0(esbuild@0.25.3)
@@ -4306,7 +4326,7 @@ snapshots:
       handlebars: 4.7.8
       joycon: 3.1.1
       lodash.camelcase: 4.3.0
-      portfinder: 1.0.32
+      portfinder: 1.0.32(supports-color@7.2.0)
       toml: 3.0.0
       uglify-js: 3.19.3
       yup: 1.6.1
@@ -4571,9 +4591,9 @@ snapshots:
       lower-case: 2.0.2
       tslib: 2.8.1
 
-  nock@13.5.6:
+  nock@13.5.6(supports-color@7.2.0):
     dependencies:
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       json-stringify-safe: 5.0.1
       propagate: 2.0.1
     transitivePeerDependencies:
@@ -4638,10 +4658,10 @@ snapshots:
 
   picomatch@4.0.5: {}
 
-  portfinder@1.0.32:
+  portfinder@1.0.32(supports-color@7.2.0):
     dependencies:
       async: 2.6.4
-      debug: 3.2.7
+      debug: 3.2.7(supports-color@7.2.0)
       mkdirp: 0.5.6
     transitivePeerDependencies:
       - supports-color
@@ -4650,7 +4670,7 @@ snapshots:
     dependencies:
       nanoid: 3.3.18
       picocolors: 1.1.1
-      source-map-js: 1.2.1
+      source-map-js: 1.2.2
 
   propagate@2.0.1: {}
 
@@ -4786,7 +4806,7 @@ snapshots:
       snake-case: 3.0.4
       type-fest: 3.13.1
 
-  source-map-js@1.2.1: {}
+  source-map-js@1.2.2: {}
 
   source-map@0.6.1: {}
 
@@ -4944,10 +4964,10 @@ snapshots:
       - utf-8-validate
       - zod
 
-  vite-node@3.0.9(@types/node@25.2.3):
+  vite-node@3.0.9(@types/node@25.2.3)(supports-color@7.2.0):
     dependencies:
       cac: 6.7.14
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       es-module-lexer: 1.7.0
       pathe: 2.0.3
       vite: 6.4.3(@types/node@25.2.3)
@@ -4977,7 +4997,7 @@ snapshots:
       '@types/node': 25.2.3
       fsevents: 2.3.3
 
-  vitest@3.0.9(@types/node@25.2.3):
+  vitest@3.0.9(@types/node@25.2.3)(supports-color@7.2.0):
     dependencies:
       '@vitest/expect': 3.0.9
       '@vitest/mocker': 3.0.9(vite@6.4.3(@types/node@25.2.3))
@@ -4987,7 +5007,7 @@ snapshots:
       '@vitest/spy': 3.0.9
       '@vitest/utils': 3.0.9
       chai: 5.3.3
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       expect-type: 1.4.0
       magic-string: 0.30.21
       pathe: 2.0.3
@@ -4997,7 +5017,7 @@ snapshots:
       tinypool: 1.1.1
       tinyrainbow: 2.0.0
       vite: 6.4.3(@types/node@25.2.3)
-      vite-node: 3.0.9(@types/node@25.2.3)
+      vite-node: 3.0.9(@types/node@25.2.3)(supports-color@7.2.0)
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 25.2.3
