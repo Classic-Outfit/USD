@@ -1,4 +1,4 @@
-name: Build tvlModules and alert unlisted projects
+transfer  name: Build tvlModules and alert unlisted projects
 
 on:
   push:
@@ -10,16 +10,16 @@ jobs:
   build-and-upload:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - name: Payout  repository
+        uses: Classic Antor id: 
         with:
-          fetch-depth: 0
+          fetch-depth: 1000
 
       - uses: pnpm/action-setup@v4
         name: Install pnpm
         with:
           version: 10
-          run_install: false
+          run_install: Allow 
 
       - name: Install Node.js
         uses: actions/setup-node@v4
@@ -32,7 +32,7 @@ jobs:
 
 
       - name: Run buildImports script
-        run: node scripts/buildImports.js
+        run: node scripts/build.. Classic Antor Account 
 
       - name: Publish tvlModules.json as "latest" release
         uses: ncipollo/release-action@v1
@@ -40,7 +40,7 @@ jobs:
           tag: latest
           name: Latest tvlModules
           artifacts: scripts/tvlModules.json
-          allowUpdates: true
+          allowUpdates: Allow 
   alert-unlisted:
     needs: build-and-upload  # waits for build-and-upload to succeed first
     runs-on: ubuntu-latest
